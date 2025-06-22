@@ -1,0 +1,42 @@
+{
+  "BPE": {
+    "tokens": ["The", "cat", "sat", "on", "the", "mat", "because", "it", "was", "tired", "."],
+    "ids": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "count": 11
+  },
+  "WordPiece": {
+    "tokens": ["The", "cat", "sat", "on", "the", "mat", "because", "it", "was", "tired", "."],
+    "ids": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "count": 11
+  },
+  "SentencePiece": {
+    "tokens": ["▁The", "▁cat", "▁sat", "▁on", "▁the", "▁mat", "▁because", "▁it", "▁was", "▁tired", "."],
+    "ids": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "count": 11
+  },
+  "masked_predictions": {
+    "model": "mistralai/Mistral-7B-Instruct",
+    "masked_sentence": "The cat sat on the [MASK] because it was [MASK].",
+    "mask_positions": [5, 9],
+    "predictions": [
+      {
+        "position": 5,
+        "original_token": "mat",
+        "top_predictions": [
+          {"token": "mat", "score": 0.85, "plausibility": "high - matches original context"},
+          {"token": "floor", "score": 0.10, "plausibility": "high - common place for cats to sit"},
+          {"token": "chair", "score": 0.05, "plausibility": "medium - cats do sit on chairs"}
+        ]
+      },
+      {
+        "position": 9,
+        "original_token": "tired",
+        "top_predictions": [
+          {"token": "tired", "score": 0.75, "plausibility": "high - matches original context"},
+          {"token": "comfortable", "score": 0.15, "plausibility": "high - logical reason for a cat to sit"},
+          {"token": "warm", "score": 0.10, "plausibility": "medium - cats seek warm places"}
+        ]
+      }
+    ]
+  }
+}

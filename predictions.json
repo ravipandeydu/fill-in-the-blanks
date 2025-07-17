@@ -1,40 +1,203 @@
 {
   "BPE": {
-    "tokens": ["The", "cat", "sat", "on", "the", "mat", "because", "it", "was", "tired", "."],
-    "ids": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "tokens": [
+      "The",
+      "cat",
+      "sat",
+      "on",
+      "the",
+      "mat",
+      "because",
+      "it",
+      "was",
+      "tired",
+      "."
+    ],
+    "ids": [
+      24,
+      28,
+      36,
+      34,
+      37,
+      33,
+      42,
+      32,
+      39,
+      41,
+      5
+    ],
     "count": 11
   },
   "WordPiece": {
-    "tokens": ["The", "cat", "sat", "on", "the", "mat", "because", "it", "was", "tired", "."],
-    "ids": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "tokens": [
+      "The",
+      "cat",
+      "sat",
+      "on",
+      "the",
+      "mat",
+      "because",
+      "it",
+      "was",
+      "tired",
+      "."
+    ],
+    "ids": [
+      35,
+      37,
+      41,
+      40,
+      43,
+      39,
+      53,
+      38,
+      52,
+      51,
+      5
+    ],
     "count": 11
   },
   "SentencePiece": {
-    "tokens": ["▁The", "▁cat", "▁sat", "▁on", "▁the", "▁mat", "▁because", "▁it", "▁was", "▁tired", "."],
-    "ids": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-    "count": 11
+    "tokens": [
+      "\u2581",
+      "T",
+      "h",
+      "e",
+      "\u2581",
+      "ca",
+      "t",
+      "\u2581",
+      "s",
+      "a",
+      "t",
+      "\u2581",
+      "o",
+      "n",
+      "\u2581",
+      "t",
+      "h",
+      "e",
+      "\u2581",
+      "m",
+      "a",
+      "t",
+      "\u2581",
+      "b",
+      "e",
+      "ca",
+      "u",
+      "s",
+      "e",
+      "\u2581",
+      "i",
+      "t",
+      "\u2581",
+      "w",
+      "a",
+      "s",
+      "\u2581",
+      "t",
+      "i",
+      "r",
+      "e",
+      "d",
+      "."
+    ],
+    "ids": [
+      5,
+      16,
+      10,
+      6,
+      5,
+      12,
+      7,
+      5,
+      9,
+      8,
+      7,
+      5,
+      21,
+      20,
+      5,
+      7,
+      10,
+      6,
+      5,
+      19,
+      8,
+      7,
+      5,
+      14,
+      6,
+      12,
+      23,
+      9,
+      6,
+      5,
+      11,
+      7,
+      5,
+      24,
+      8,
+      9,
+      5,
+      7,
+      11,
+      22,
+      6,
+      18,
+      15
+    ],
+    "count": 43
   },
   "masked_predictions": {
-    "model": "mistralai/Mistral-7B-Instruct",
-    "masked_sentence": "The cat sat on the [MASK] because it was [MASK].",
-    "mask_positions": [5, 9],
+    "model": "distilroberta-base",
+    "masked_sentence": "The [MASK]t s[MASK]t on the mat because it was tired.",
+    "mask_positions": [
+      5,
+      9
+    ],
     "predictions": [
       {
         "position": 5,
-        "original_token": "mat",
+        "original_token": "ca",
         "top_predictions": [
-          {"token": "mat", "score": 0.85, "plausibility": "high - matches original context"},
-          {"token": "floor", "score": 0.10, "plausibility": "high - common place for cats to sit"},
-          {"token": "chair", "score": 0.05, "plausibility": "medium - cats do sit on chairs"}
+          {
+            "token": "tro",
+            "score": 0.4860115051269531,
+            "plausibility": "high - semantically appropriate"
+          },
+          {
+            "token": "col",
+            "score": 0.05682453513145447,
+            "plausibility": "medium - somewhat appropriate"
+          },
+          {
+            "token": "mut",
+            "score": 0.04867821931838989,
+            "plausibility": "low - not very appropriate"
+          }
         ]
       },
       {
         "position": 9,
-        "original_token": "tired",
+        "original_token": "a",
         "top_predictions": [
-          {"token": "tired", "score": 0.75, "plausibility": "high - matches original context"},
-          {"token": "comfortable", "score": 0.15, "plausibility": "high - logical reason for a cat to sit"},
-          {"token": "warm", "score": 0.10, "plausibility": "medium - cats seek warm places"}
+          {
+            "token": "**",
+            "score": 0.37532275915145874,
+            "plausibility": "high - semantically appropriate"
+          },
+          {
+            "token": "--",
+            "score": 0.10631406307220459,
+            "plausibility": "medium - somewhat appropriate"
+          },
+          {
+            "token": "mer",
+            "score": 0.04416383057832718,
+            "plausibility": "low - not very appropriate"
+          }
         ]
       }
     ]
